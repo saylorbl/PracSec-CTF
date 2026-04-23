@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PracSec CTF Marketplace</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>CTF Marketplace</h1>
+        <p>Trade challenges, tools, and flags for fun.</p>
+      </div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#items">Marketplace</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h2>Build your CTF gear collection.</h2>
+          <p>Discover challenge packs, exploit toolkits, and team upgrades in one secure marketplace.</p>
+          <div class="hero-actions">
+            <button id="explore-button">Explore Marketplace</button>
+            <button class="secondary" id="learn-button">How it works</button>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Featured item</h3>
+          <p class="tag">Popular</p>
+          <h4>Beginner Web Challenge Pack</h4>
+          <p>Perfect for new players: 5 web challenges, walkthroughs, and hints.</p>
+          <span class="price">$12</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section-light">
+      <div class="container">
+        <h2>Marketplace features</h2>
+        <div class="feature-grid">
+          <article>
+            <h3>CTF Items</h3>
+            <p>Sell and trade challenge write-ups, tools, and badges with your team.</p>
+          </article>
+          <article>
+            <h3>Secure Listing</h3>
+            <p>Item listings are simple, clear, and ready for tournament use.</p>
+          </article>
+          <article>
+            <h3>Fast Discovery</h3>
+            <p>Filter categories, search by difficulty, and find your next target quickly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="items" class="container section-marketplace">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Marketplace</p>
+          <h2>Available challenge bundles</h2>
+        </div>
+        <div class="search-bar">
+          <input id="searchInput" type="search" placeholder="Search items..." aria-label="Search marketplace" />
+        </div>
+      </div>
+
+      <div id="itemGrid" class="item-grid"></div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>PracSec CTF</h3>
+        <p>Built for practice, sharing, and competition prep.</p>
+      </div>
+      <p>© 2026 CTF Marketplace. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
