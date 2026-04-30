@@ -454,3 +454,21 @@ footer p {
     position: static;
   }
 }
+
+.win-card {
+    border: 3px solid #ffd700 !important;
+    background: rgba(255, 215, 0, 0.1);
+    animation: glow 1.5s infinite alternate;
+}
+
+.win-text {
+    color: #ffd700;
+    font-weight: bold;
+    font-family: 'Pirata One', cursive;
+    font-size: 1.2rem;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 5px #ffd700; }
+    to { box-shadow: 0 0 20px #ffd700; }
+}

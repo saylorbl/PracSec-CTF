@@ -4,6 +4,9 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 3000;
 
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('./plunder.db');
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 
@@ -52,10 +55,19 @@ const items = [
   },
 ];
 
-app.get("/api/items", (req, res) => {
-  res.json(items);
+app.get("/api/search", (req, res) => {
+    const query = req.query.q || '';
+    // Added 'description' to the SELECT statement
+    const sql = `SELECT name, price, description FROM products WHERE name LIKE '%${query}%'`;
+    
+    db.all(sql, [], (err, rows) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+        } else {
+            res.json(rows);
+        }
+    });
 });
-
 app.post("/api/contact", (req, res) => {
   const { name, email, message } = req.body;
   console.log("Harbor message received:", { name, email, message });
