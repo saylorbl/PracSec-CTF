@@ -2,91 +2,196 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PracSec CTF Marketplace</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Davy Jones' Plunder Emporium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <h1>CTF Marketplace</h1>
-        <p>Trade challenges, tools, and flags for fun.</p>
-      </div>
-      <nav class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#items">Marketplace</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h2>Build your CTF gear collection.</h2>
-          <p>Discover challenge packs, exploit toolkits, and team upgrades in one secure marketplace.</p>
-          <div class="hero-actions">
-            <button id="explore-button">Explore Marketplace</button>
-            <button class="secondary" id="learn-button">How it works</button>
-          </div>
-        </div>
-        <div class="hero-card">
-          <h3>Featured item</h3>
-          <p class="tag">Popular</p>
-          <h4>Beginner Web Challenge Pack</h4>
-          <p>Perfect for new players: 5 web challenges, walkthroughs, and hints.</p>
-          <span class="price">$12</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="features" class="section-light">
-      <div class="container">
-        <h2>Marketplace features</h2>
-        <div class="feature-grid">
-          <article>
-            <h3>CTF Items</h3>
-            <p>Sell and trade challenge write-ups, tools, and badges with your team.</p>
-          </article>
-          <article>
-            <h3>Secure Listing</h3>
-            <p>Item listings are simple, clear, and ready for tournament use.</p>
-          </article>
-          <article>
-            <h3>Fast Discovery</h3>
-            <p>Filter categories, search by difficulty, and find your next target quickly.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="items" class="container section-marketplace">
-      <div class="section-header">
-        <div>
-          <p class="eyebrow">Marketplace</p>
-          <h2>Available challenge bundles</h2>
-        </div>
-        <div class="search-bar">
-          <input id="searchInput" type="search" placeholder="Search items..." aria-label="Search marketplace" />
-        </div>
-      </div>
-
-      <div id="itemGrid" class="item-grid"></div>
-    </section>
-  </main>
-
-  <footer id="contact" class="site-footer">
-    <div class="container footer-inner">
+ 
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-inner">
+    <div class="logo-area">
+      <span class="skull-icon">☠️</span>
       <div>
-        <h3>PracSec CTF</h3>
-        <p>Built for practice, sharing, and competition prep.</p>
+        <div class="site-title">Davy Jones' Emporium</div>
+        <div class="site-subtitle">Finest Plunder on the Seven Seas</div>
       </div>
-      <p>© 2026 CTF Marketplace. All rights reserved.</p>
     </div>
-  </footer>
+    <nav>
+      <a href="#">Home Port</a>
+      <a href="#">Ye Manifest</a>
+      <a href="#">Me Account</a>
+    </nav>
+  </div>
+</header>
+ 
+<!-- ── HERO ── -->
+<div class="hero">
+  <span class="hero-ship">⛵</span>
+  <h1>Welcome to Davy Jones' Plunder Emporium</h1>
+  <p>Where every treasure is stolen fair and square. Browse our ill-gotten wares, ye scallywag.</p>
+</div>
+<div class="wave-divider"></div>
+ 
+<!-- ── MAIN ── -->
+<div class="page-wrapper">
+ 
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>🔍 Search the Booty</h2>
+    <input type="text" id="searchInput" placeholder="Search for treasures..." class="search-bar" />
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-quote">
+      "A pirate's life is the only life worth livin'."<br />
+      — Cap'n Blackwood
+    </div>
+  </aside>
+ 
+  <!-- PRODUCTS -->
+  <main>
+    <div class="products-header">
+      <h2>🏴‍☠️ All Plundered Goods</h2>
+      <span>12 treasures found</span>
+    </div>
+ 
+    <div class="grid" id="productGrid">
+ 
+      <div class="card">
+        <div class="card-img-wrap">🌑</div>
+        <div class="card-body">
+          <div class="card-title">Dancin' In The Dark Lantern</div>
+          <div class="card-stars">★★★★☆</div>
+          <div class="card-price">15.30 doubloons</div>
+          <a href="#" class="btn-view">Inspect Booty</a>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img-wrap">🎭</div>
+        <div class="card-body">
+          <div class="card-title">First Impression Disguise Kit</div>
+          <div class="card-stars">★★☆☆☆</div>
+          <div class="card-price">80.46 doubloons</div>
+          <a href="#" class="btn-view">Inspect Booty</a>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img-wrap">👢</div>
+        <div class="card-body">
+          <div class="card-title">Baby Minding Sea Boots</div>
+          <div class="card-stars">★★★★☆</div>
+          <div class="card-price">38.08 doubloons</div>
+          <a href="#" class="btn-view">Inspect Booty</a>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img-wrap">⚠️</div>
+        <div class="card-body">
+          <div class="card-title">Caution Sign (Stolen)</div>
+          <div class="card-stars">★★★☆☆</div>
+          <div class="card-price">65.29 doubloons</div>
+          <a href="#" class="btn-view">Inspect Booty</a>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <span class="badge">🔥 Hot</span>
+        <div class="card-img-wrap">🔧</div>
+        <div class="card-body">
+          <div class="card-title">Foldin' Nautical Gadgets</div>
+          <div class="card-stars">★☆☆☆☆</div>
+          <div class="card-price">90.68 doubloons</div>
+          <a href="#" class="btn-view">Inspect Booty</a>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img-wrap">⌨️</div>
+        <div class="card-body">
+          <div class="card-title">The Giant Enter Key (Cursed)</div>
+          <div class="card-stars">★☆☆☆☆</div>
+          <div class="card-price">52.42 doubloons</div>
+          <a href="#" class="btn-view">Inspect Booty</a>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <span class="badge">⭐ Best</span>
+        <div class="card-img-wrap">🫙</div>
+        <div class="card-body">
+          <div class="card-title">Hydrated Ship's Biscuits</div>
+          <div class="card-stars">★★★★★</div>
+          <div class="card-price">79.70 doubloons</div>
+          <a href="#" class="btn-view">Inspect Booty</a>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img-wrap">🥚</div>
+        <div class="card-body">
+          <div class="card-title">Eggtastic Galley Eggcessories</div>
+          <div class="card-stars">★★★☆☆</div>
+          <div class="card-price">89.84 doubloons</div>
+          <a href="#" class="btn-view">Inspect Booty</a>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img-wrap">🫖</div>
+        <div class="card-body">
+          <div class="card-title">Waterproof Grog Bags</div>
+          <div class="card-stars">★☆☆☆☆</div>
+          <div class="card-price">58.37 doubloons</div>
+          <a href="#" class="btn-view">Inspect Booty</a>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img-wrap">🛡️</div>
+        <div class="card-body">
+          <div class="card-title">Cannonball Protection Gear</div>
+          <div class="card-stars">★★★★☆</div>
+          <div class="card-price">82.80 doubloons</div>
+          <a href="#" class="btn-view">Inspect Booty</a>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img-wrap">⛵</div>
+        <div class="card-body">
+          <div class="card-title">Eco Rowboat (Slightly Sunk)</div>
+          <div class="card-stars">★★★☆☆</div>
+          <div class="card-price">8.14 doubloons</div>
+          <a href="#" class="btn-view">Inspect Booty</a>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-img-wrap">⚖️</div>
+        <div class="card-body">
+          <div class="card-title">Balance Beams of Doom</div>
+          <div class="card-stars">★★☆☆☆</div>
+          <div class="card-price">82.46 doubloons</div>
+          <a href="#" class="btn-view">Inspect Booty</a>
+        </div>
+      </div>
+ 
+    </div><!-- /grid -->
+  </main>
+</div>
+ 
+<!-- ── FOOTER ── -->
+<footer>
+  <span class="footer-skull">☠️</span>
+  <p>© Davy Jones' Plunder Emporium — Est. on the High Seas, 1692 — All items pillaged responsibly</p>
+  <p class="footer-note">No refunds. We're pirates.</p>
+</footer>
+ 
+<script src="script.js"></script>
 
-  <script src="app.js"></script>
 </body>
 </html>
