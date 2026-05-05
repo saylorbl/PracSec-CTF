@@ -1,24 +1,27 @@
-# Use a Node.js base image
 FROM node:18-slim
 
-# Install Python and SQLite3 (needed for the database and setup script)
-RUN apt-get update && apt-get install -y python3 sqlite3
+# 1. Install build tools needed to compile native SQLite3 bindings
+RUN apt-get update && apt-get install -y \
+    python3 \
+    sqlite3 \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
 
-# Set the working directory
 WORKDIR /app
 
-# Copy package files and install dependencies
+# 2. Copy ONLY package files first
 COPY package*.json ./
-RUN npm install
 
-# Copy the rest of the application
+# 3. Force a fresh build of native modules inside the container
+# This ensures it links against the container's version of GLIBC
+RUN npm install --build-from-source
+
+# 4. Now copy the rest of your code
 COPY . .
 
-# Run the database setup script to generate plunder.db
+# 5. Run your DB setup
 RUN python3 setup_db.py
 
-# Expose the port the app runs on
 EXPOSE 3000
 
-# Command to start the app
 CMD ["npm", "start"]
